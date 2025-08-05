@@ -27,12 +27,6 @@
       transform: translate(50%, -50%);
       object-fit: cover;
       filter: brightness(0.7);
-      animation-play-state: running;
-      animation-duration: 0s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      /* Geschwindigkeit 0.9 */
-      /* Leider video playbackRate kann nicht per CSS, muss per JS */
     }
 
     /* Container für Kästen */
@@ -67,7 +61,8 @@
 
     /* Text im ersten Kasten */
     .video-container:first-child p {
-      font-size: 1.1rem; /* etwas kleiner als vorher */
+      font-size: 1rem; /* kleiner als vorher */
+      max-width: 95%;
       text-shadow:
         3px 3px 5px black,
         -3px -3px 5px black,
