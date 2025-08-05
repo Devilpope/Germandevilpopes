@@ -63,16 +63,23 @@
     .video-container:first-child p {
       font-size: 1.5rem; /* deutlich größer */
       max-width: 95%;
-      text-shadow:
-        4px 4px 6px black,
-        -4px -4px 6px black,
-        4px -4px 6px black,
-        -4px 4px 6px black;
-      line-height: 1.4;
+      line-height: 1.8; /* mehr Zeilenabstand */
       margin: 0;
       animation: zittern 0.3s infinite;
-      /* Türkis als Textfarbe durch Vererbung vom Body */
-      color: inherit;
+      color: #00ffff; /* Türkis */
+      -webkit-text-stroke: 1px white; /* weiße Umrandung */
+      text-shadow:
+        2px 2px 3px black, /* schwarzer Schatten */
+        -2px -2px 3px black,
+        2px -2px 3px black,
+        -2px 2px 3px black;
+    }
+
+    /* Für Abstand zwischen den einzelnen Zeilen im <p> */
+    .video-container:first-child p br {
+      content: "";
+      display: block;
+      margin-bottom: 0.8em; /* Abstand nach jeder Zeile */
     }
 
     @keyframes zittern {
