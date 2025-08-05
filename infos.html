@@ -8,24 +8,50 @@
     html, body {
       margin: 0; padding: 0; height: 100%; overflow: hidden;
       background: black;
+      font-family: Arial, sans-serif;
+      color: #00ffff;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     video {
+      position: fixed;
+      top: 0; left: 0;
       width: 100vw;
       height: 100vh;
       object-fit: cover;
       filter: contrast(1.2) brightness(1.1);
       transform: scale(1.02);
       image-rendering: crisp-edges;
+      z-index: -1;
+    }
+    /* Kasten oben links */
+    .info-box {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      max-width: 350px;
+      padding: 1rem 1.5rem;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+      border-radius: 12px;
+      text-shadow: 1px 1px 3px black;
+      font-size: 1.2rem;
+      line-height: 1.4;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
   <video autoplay muted loop playsinline>
-    <source src="https://raw.githubusercontent.com/Devilpope/Germandevilpopes/2269a8e33791a35bded7ac24cb8e827578f1a32e/7674017f-8678-492d-9195-b52c446da4fa%20(2).mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/Devilpope/Germandevilpopes/2269a8e33791a35bded7ac24cb8e827578f1a32e/7674017f-8678-492d-9195-b52c446da4fa%20(2).mp4" type="video/mp4" />
     Dein Browser unterstützt das Video-Tag nicht.
   </video>
+
+  <div class="info-box">
+    Willkommen bei The German Elite!<br />
+    Hier findest du alle Infos zu unserer Gilde.
+  </div>
 </body>
 </html>
