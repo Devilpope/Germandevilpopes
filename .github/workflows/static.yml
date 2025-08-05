@@ -3,7 +3,7 @@ name: Deploy static site to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Wenn du auf main pushst, wird deployed
 
 jobs:
   deploy:
@@ -18,4 +18,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
-          publish_branch: main
+          publish_branch: gh-pages
