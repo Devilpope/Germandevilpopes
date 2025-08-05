@@ -67,25 +67,32 @@
       }
     }
 
-    /* Navigation - modern, transparent, 3D mit Animation */
+    /* Navigation - 3D-Effekt + Textschatten */
     nav {
-      background: rgba(255, 255, 255, 0.15); /* sehr transparentes Weiß */
-      backdrop-filter: blur(8px);             /* moderner Glass-Effekt */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* leichter Schatten für 3D */
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),   /* weicher unterer Schatten */
+        inset 0 1px 2px rgba(255, 255, 255, 0.4), /* heller oberer Lichtreflex */
+        0 6px 20px rgba(0, 0, 0, 0.2);  /* tieferer 3D-Schatten */
       border-radius: 12px;
       display: flex;
       justify-content: center;
       gap: 2rem;
       padding: 1rem 2rem;
       margin: 0 1rem;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
       position: sticky;
       top: 0;
       z-index: 10;
     }
 
     nav:hover {
-      background: rgba(255, 255, 255, 0.25); /* bei Hover etwas deutlicher */
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.35),
+        inset 0 1px 3px rgba(255, 255, 255, 0.5),
+        0 8px 25px rgba(0, 0, 0, 0.25);
     }
 
     nav a {
@@ -95,7 +102,7 @@
       position: relative;
       padding: 0.25rem 0.5rem;
       transition: color 0.3s ease, transform 0.3s ease;
-      text-shadow: 0 0 5px #00ffff;
+      text-shadow: 1px 1px 2px black; /* schwarze Lesbarkeits-Schattierung */
     }
 
     nav a::after {
