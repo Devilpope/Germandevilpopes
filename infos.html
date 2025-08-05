@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GermanDevilPopes - Infos</title>
   <style>
-    /* Grundlayout */
-    body {
+    /* Hintergrundvideo */
+    body, html {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
+      height: 100%;
       overflow-x: hidden;
+      color: #fff;
+      font-family: Arial, sans-serif;
     }
 
-    /* Video als Hintergrund */
     .video-background {
       position: fixed;
       top: 0;
@@ -26,16 +26,15 @@
     }
 
     .video-background video {
-      min-width: 100%;
-      min-height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       filter: brightness(0.8);
+      transform: scale(1.02);
     }
 
-    /* Container für Kästen */
+    /* Container für die Kästen */
     .container {
-      position: relative;
-      z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -43,30 +42,65 @@
       padding: 60px 20px;
     }
 
-    /* Einzelne Kästen */
+    /* Kästen */
     .box {
       width: 80vw;
       max-width: 1200px;
       background: rgba(0, 0, 0, 0.6);
       border-radius: 12px;
-      padding: 20px;
       box-shadow:
         0 4px 15px rgba(0, 255, 255, 0.6),
         inset 0 0 20px rgba(0, 255, 255, 0.3);
+      padding: 30px;
     }
 
     /* Text im ersten Kasten */
-    .box h2 {
-      font-size: 1.5rem; /* etwas größer als vorher */
-      line-height: 1.5;
+    .box p {
+      color: white;
       text-align: center;
-      text-shadow: 3px 3px 6px black, 0 0 10px black;
-      animation: fadeIn 2s ease-in-out;
+      font-size: 2.4rem; /* doppelte Größe */
+      line-height: 1.6;
+      margin: 0;
+      font-weight: bold;
+
+      /* Starker 3D-Schatten */
+      text-shadow:
+        3px 3px 5px black,
+        6px 6px 10px rgba(0,0,0,0.8),
+        0 0 10px cyan,
+        0 0 20px cyan,
+        0 0 40px cyan;
+
+      /* Animation */
+      animation: glowPulse 3s ease-in-out infinite;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* Glow-Animation */
+    @keyframes glowPulse {
+      0% {
+        text-shadow:
+          3px 3px 5px black,
+          6px 6px 10px rgba(0,0,0,0.8),
+          0 0 10px cyan,
+          0 0 20px cyan,
+          0 0 40px cyan;
+      }
+      50% {
+        text-shadow:
+          3px 3px 5px black,
+          6px 6px 10px rgba(0,0,0,0.8),
+          0 0 20px cyan,
+          0 0 40px cyan,
+          0 0 80px cyan;
+      }
+      100% {
+        text-shadow:
+          3px 3px 5px black,
+          6px 6px 10px rgba(0,0,0,0.8),
+          0 0 10px cyan,
+          0 0 20px cyan,
+          0 0 40px cyan;
+      }
     }
   </style>
 </head>
@@ -74,7 +108,7 @@
 
   <!-- Hintergrundvideo -->
   <div class="video-background">
-    <video autoplay muted loop playsinline playbackRate="0.9">
+    <video autoplay muted loop playsinline style="animation-play-state: running;">
       <source src="https://github.com/Devilpope/Germandevilpopes/raw/gh-pages/7674017f-8678-492d-9195-b52c446da4fa%20(2).mp4" type="video/mp4">
     </video>
   </div>
@@ -83,25 +117,18 @@
   <div class="container">
     <!-- Erster Kasten mit Text -->
     <div class="box">
-      <h2>
-        Hallo meine finsteren Geschwister und Brüder der Dunkelheit. Die Horde wurde weich, die Horde wurde sanft, die Horde wurde friedlich, die Horde wurde zum Mensch!! 
-        Und das wird ab sofort geändert. Wir die GermanDevilPopes, sind das pure Böse. Wir Wildern, wir haben dunklen Humor, wir haben kein Erbarmen! 
-        Wir erschaffen wieder die Dunkelheit. Wenn wir auftauchen, wird es still um uns herum. Hier entsteht nicht nur eine Bekanntschaft. 
-        Hier entsteht Loyalität, es werden Werte vertreten und wir werden zu einer Familie der Dunkelheit. 
-        GDP - Die finstere und düstere Gilde.
-      </h2>
+      <p>
+        Hallo meine finsteren Geschwister und Brüder der Dunkelheit. Die Horde wurde weich, die Horde wurde sanft, die Horde wurde friedlich, die Horde wurde zum Mensch!! Und das wird ab sofort geändert. 
+        Wir die GermanDevilPopes, sind das pure Böse. Wir Wildern, wir haben dunklen Humor, wir haben kein Erbarmen! Wir erschaffen wieder die Dunkelheit. Wenn wir auftauchen, wird es still um uns herum. 
+        Hier entsteht nicht nur eine Bekanntschaft. Hier entsteht Loyalität, es werden Werte vertreten und wir werden zu einer Familie der Dunkelheit. GDP - Die finstere und düstere Gilde.
+      </p>
     </div>
 
-    <!-- Drei leere Kästen -->
+    <!-- Leere Kästen -->
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
   </div>
-
-  <!-- Script für Video-Geschwindigkeit -->
-  <script>
-    document.querySelector('.video-background video').playbackRate = 0.9;
-  </script>
 
 </body>
 </html>
