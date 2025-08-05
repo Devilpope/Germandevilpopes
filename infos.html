@@ -11,6 +11,7 @@
       padding: 0;
       overflow-x: hidden;
       font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: white;
       background: black;
     }
 
@@ -58,27 +59,17 @@
       padding: 20px;
     }
 
-    /* Text im ersten Kasten */
-    .video-container:first-child p {
-      font-size: 1.7rem; /* etwas größer */
+    /* Text-Optik für alle Kästen */
+    .video-container p {
+      font-size: 1.1rem; /* etwas größer */
       max-width: 95%;
-      line-height: 1.8; /* mehr Zeilenabstand */
-      margin: 0;
-
-      /* Kräftiges, leuchtendes Türkis mit weißer Outline */
-      color: #00f5ff;
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: white;
-
-      /* Schwarzer Schatten + Glow-Effekt */
+      color: #00ffff; /* kräftiges Türkis */
       text-shadow:
-        0 0 5px #00f5ff,
-        0 0 10px #00f5ff,
-        0 0 20px #00f5ff,
         2px 2px 4px black,
         -2px -2px 4px black,
-        2px -2px 4px black,
-        -2px 2px 4px black;
+        0 0 8px #00ffff;
+      line-height: 1.6; /* mehr Zeilenabstand */
+      margin: 0;
     }
   </style>
 </head>
@@ -86,6 +77,7 @@
   <video autoplay muted loop playsinline id="background-video" src="https://github.com/Devilpope/Germandevilpopes/raw/gh-pages/7674017f-8678-492d-9195-b52c446da4fa%20(2).mp4"></video>
 
   <div class="container">
+    <!-- Erster Kasten -->
     <div class="video-container">
       <p>
         Hallo meine finsteren Geschwister und Brüder der Dunkelheit. Die Horde wurde weich, die Horde wurde sanft, die Horde wurde friedlich, die Horde wurde zum Mensch!! Und das wird ab sofort geändert. <br />
@@ -93,7 +85,23 @@
         Hier entsteht nicht nur eine Bekanntschaft. Hier entsteht Loyalität, es werden Werte vertreten und wir werden zu einer Familie der Dunkelheit. GDP - Die finstere und düstere Gilde
       </p>
     </div>
-    <div class="video-container"></div>
+
+    <!-- Zweiter Kasten -->
+    <div class="video-container">
+      <p>
+        Was erwartet euch?<br><br>
+        - Dunkler Humor, aber auch ernste Genossen<br>
+        - Erfahrene WoW-Spieler, aber auch Neulinge sind herzlich Willkommen.<br>
+        - Die Gilde ist ab 18+<br>
+        - PvP/PvE beides erwünscht<br>
+        - Lockerer Erfahrungsaustausch und Spielerlebnis miteinander<br>
+        - Geplante wöchentliche Raids, PvE-Events, PvP-Events<br>
+        - Aufstiegsmöglichkeit für jeden, der loyal mitarbeitet<br>
+        - Discord-Server, Website mit aktivem Forum/Eventplanung
+      </p>
+    </div>
+
+    <!-- Leere Kästen -->
     <div class="video-container"></div>
     <div class="video-container"></div>
   </div>
