@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GermanDevilPopes - GDP-Gilde</title>
   <style>
-    /* Hintergrundbild mit Animation */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       color: #eee;
     }
-
     body::before {
       content: "";
       position: fixed;
@@ -25,19 +23,15 @@
       animation: bgMove 20s ease-in-out infinite alternate;
       transform: scale(1.05);
     }
-
     @keyframes bgMove {
       0% { transform: scale(1.05) translateY(0px); }
       50% { transform: scale(1.12) translateY(-20px); }
       100% { transform: scale(1.05) translateY(0px); }
     }
-
-    /* Header */
     header {
       text-align: center;
       padding: 2rem 1rem;
     }
-
     header h1 {
       margin: 0;
       font-size: 3rem;
@@ -45,16 +39,13 @@
       text-shadow: 3px 3px 8px black, 0 0 5px black;
       animation: glow 2s ease-in-out infinite alternate;
     }
-
     header h1 a {
       color: #00ffff;
       text-decoration: none;
     }
-
     header h1 a:hover {
       text-decoration: underline;
     }
-
     @keyframes glow {
       from {
         text-shadow: 3px 3px 8px black, 0 0 5px #00ffff, 0 0 10px #00ffff,
@@ -65,8 +56,6 @@
                      0 0 40px #00ffff, 0 0 80px #00ffff;
       }
     }
-
-    /* Navigation */
     nav {
       background: rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(8px);
@@ -76,7 +65,6 @@
       padding: 1rem 0;
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
-
     nav a {
       color: #00ffff;
       text-decoration: none;
@@ -85,7 +73,6 @@
       position: relative;
       transition: color 0.3s;
     }
-
     nav a::after {
       content: "";
       position: absolute;
@@ -97,32 +84,16 @@
       box-shadow: 0 0 10px #00ffff;
       transition: width 0.3s;
     }
-
     nav a:hover::after {
       width: 100%;
     }
-
-    /* Hauptinhalt */
     main {
       max-width: 900px;
       margin: 3rem auto;
-      padding: 1rem;
+      padding: 2rem;
       background: rgba(0, 0, 0, 0.4);
       border-radius: 12px;
     }
-
-    /* Video Container */
-    .video-preview video {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      object-position: center 20%;
-      border-radius: 12px;
-      opacity: 0.75; /* Transparenz */
-      pointer-events: none; /* Kein Klick möglich */
-    }
-
-    /* Footer */
     footer {
       background: rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(8px);
@@ -141,17 +112,14 @@
     <h1><a href="https://thegermanelite.de" target="_blank" rel="noopener noreferrer">The German Elite</a></h1>
   </header>
   <nav>
-    <a href="#infos">Infos</a>
+    <a href="infos.html">Infos</a>
     <a href="bewerbung.html" target="_blank" rel="noopener noreferrer">Bewerbung</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
   <main>
-    <section id="infos">
-      <div class="video-preview">
-        <video autoplay muted loop playsinline>
-          <source src="https://raw.githubusercontent.com/Devilpope/Germandevilpopes/gh-pages/7674017f-8678-492d-9195-b52c446da4fa.mp4" type="video/mp4">
-        </video>
-      </div>
+    <section id="willkommen">
+      <h2>Willkommen</h2>
+      <p>Willkommen bei The German Elite! Unsere WoW-Gilde steht für Teamwork, Spaß und Respekt.</p>
     </section>
   </main>
   <footer>
