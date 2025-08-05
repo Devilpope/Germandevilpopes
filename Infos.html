@@ -61,7 +61,7 @@
 
     /* Text im ersten Kasten */
     .video-container:first-child p {
-      font-size: 1rem; /* kleiner als vorher */
+      font-size: 0.7rem; /* ca. 30% kleiner */
       max-width: 95%;
       text-shadow:
         3px 3px 5px black,
@@ -70,6 +70,14 @@
         -3px 3px 5px black;
       line-height: 1.4;
       margin: 0;
+      animation: zittern 0.15s infinite;
+    }
+
+    @keyframes zittern {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(-1.5px, 1.5px); }
+      50% { transform: translate(1.5px, -1.5px); }
+      75% { transform: translate(-1.5px, -1.5px); }
     }
   </style>
 </head>
