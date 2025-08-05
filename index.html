@@ -105,18 +105,20 @@
     main {
       max-width: 900px;
       margin: 3rem auto;
-      padding: 1rem;
-      background: rgba(0, 0, 0, 0.5);
+      padding: 0; /* Kein Padding, damit Video den Kasten füllt */
+      background: rgba(0, 0, 0, 0.3); /* Noch transparenter */
       border-radius: 12px;
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(4px);
+      overflow: hidden; /* Verhindert, dass Video übersteht */
     }
 
     .video-preview video {
       width: 100%;
       height: auto;
-      border-radius: 8px;
-      opacity: 0.85; /* Transparenz */
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      display: block;
+      border-radius: 0;
+      opacity: 0.75; /* Mehr Transparenz */
+      pointer-events: none; /* Keine Interaktion möglich */
     }
 
     /* Footer */
@@ -145,7 +147,7 @@
   </nav>
   <main>
     <section id="infos" class="video-preview">
-      <video autoplay muted loop controls>
+      <video autoplay muted loop playsinline>
         <source src="https://raw.githubusercontent.com/Devilpope/Germandevilpopes/9b0dcf520260216761d6b4d392f46e491192651a/7674017f-8678-492d-9195-b52c446da4fa.mp4" type="video/mp4">
         Dein Browser unterstützt kein HTML5-Video.
       </video>
