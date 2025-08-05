@@ -3,30 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Infos - GERMAN DEVIL POPES</title>
+  <title>GermanDevilPopes - Infos</title>
   <style>
-    html, body {
+    /* Vollbild-Video als Hintergrund */
+    body, html {
       margin: 0;
       padding: 0;
       height: 100%;
-      background: black;
       overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: black;
     }
-    video {
+
+    video#bg-video {
       position: fixed;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translate(-50%, -50%);
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
+      z-index: -1;
     }
   </style>
 </head>
 <body>
-  <video autoplay loop muted playsinline>
-    <source src="7674017f-8678-492d-9195-b52c446da4fa.mp4" type="video/mp4">
-    Dein Browser unterstützt kein HTML5-Video.
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="7674017f-8678-492d-9195-b52c446da4fa.mp4" type="video/mp4" />
+    Dein Browser unterstützt das Video-Tag nicht.
   </video>
 </body>
 </html>
