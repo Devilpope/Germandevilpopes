@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GermanDevilPopes - GDP-Gilde</title>
   <style>
+    /* Hintergrundbild */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -28,6 +29,8 @@
       50% { transform: scale(1.12) translateY(-20px); }
       100% { transform: scale(1.05) translateY(0px); }
     }
+
+    /* Header */
     header {
       text-align: center;
       padding: 2rem 1rem;
@@ -43,9 +46,6 @@
       color: #00ffff;
       text-decoration: none;
     }
-    header h1 a:hover {
-      text-decoration: underline;
-    }
     @keyframes glow {
       from {
         text-shadow: 3px 3px 8px black, 0 0 5px #00ffff, 0 0 10px #00ffff,
@@ -56,22 +56,23 @@
                      0 0 40px #00ffff, 0 0 80px #00ffff;
       }
     }
+
+    /* Navigation */
     nav {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.25);
       backdrop-filter: blur(8px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
       display: flex;
       justify-content: center;
       gap: 1.5rem;
       padding: 1rem 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
     nav a {
       color: #00ffff;
       text-decoration: none;
       font-weight: bold;
-      text-shadow: 1px 1px 2px black;
       position: relative;
-      transition: color 0.3s;
+      text-shadow: 1px 1px 3px black;
     }
     nav a::after {
       content: "";
@@ -87,23 +88,18 @@
     nav a:hover::after {
       width: 100%;
     }
-    main {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 12px;
-    }
+
+    /* Footer */
     footer {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.25);
       backdrop-filter: blur(8px);
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.4);
       text-align: center;
       padding: 1rem 0;
       color: #eee;
+      text-shadow: 1px 1px 3px black;
       font-size: 0.9rem;
-      text-shadow: 1px 1px 2px black;
       margin-top: 2rem;
-      box-shadow: 0 -4px 10px rgba(0,0,0,0.4);
     }
   </style>
 </head>
@@ -116,12 +112,7 @@
     <a href="bewerbung.html" target="_blank" rel="noopener noreferrer">Bewerbung</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
-  <main>
-    <section id="willkommen">
-      <h2>Willkommen</h2>
-      <p>Willkommen bei The German Elite! Unsere WoW-Gilde steht für Teamwork, Spaß und Respekt.</p>
-    </section>
-  </main>
+
   <footer>
     &copy; 2025 GERMAN DEVIL POPES - Alle Rechte vorbehalten
   </footer>
