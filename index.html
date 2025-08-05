@@ -67,33 +67,53 @@
       }
     }
 
-    /* Navigation */
+    /* Navigation - modern, transparent, 3D mit Animation */
     nav {
-      background: rgba(42, 42, 42, 0.8);
+      background: rgba(255, 255, 255, 0.15); /* sehr transparentes Weiß */
+      backdrop-filter: blur(8px);             /* moderner Glass-Effekt */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* leichter Schatten für 3D */
+      border-radius: 12px;
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem 0;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      margin: 0 1rem;
+      transition: background-color 0.3s ease;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav:hover {
+      background: rgba(255, 255, 255, 0.25); /* bei Hover etwas deutlicher */
     }
 
     nav a {
       color: #00ffff;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
       position: relative;
-      transition: color 0.3s;
+      padding: 0.25rem 0.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+      text-shadow: 0 0 5px #00ffff;
     }
 
     nav a::after {
       content: "";
       position: absolute;
       width: 0%;
-      height: 2px;
+      height: 3px;
       left: 0;
-      bottom: -4px;
+      bottom: -6px;
       background: #00ffff;
-      box-shadow: 0 0 10px #00ffff;
-      transition: width 0.3s;
+      border-radius: 3px;
+      box-shadow: 0 0 12px #00ffff;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00fff7;
+      transform: translateY(-3px) scale(1.05);
     }
 
     nav a:hover::after {
@@ -165,6 +185,7 @@
         <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0" title="Video 2" allowfullscreen></iframe>
       </div>
+    </section>
   </main>
   <footer>
     &copy; 2025 GERMAN DEVIL POPES - Alle Rechte vorbehalten
