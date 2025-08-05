@@ -105,20 +105,21 @@
     main {
       max-width: 900px;
       margin: 3rem auto;
-      padding: 0; /* Kein Padding, damit Video den Kasten füllt */
-      background: rgba(0, 0, 0, 0.3); /* Noch transparenter */
+      padding: 0;
+      background: rgba(0, 0, 0, 0.3);
       border-radius: 12px;
       backdrop-filter: blur(4px);
-      overflow: hidden; /* Verhindert, dass Video übersteht */
+      overflow: hidden;
     }
 
     .video-preview video {
       width: 100%;
-      height: auto;
+      height: 500px; /* Höhe festlegen für Zuschnitt */
       display: block;
-      border-radius: 0;
-      opacity: 0.75; /* Mehr Transparenz */
-      pointer-events: none; /* Keine Interaktion möglich */
+      object-fit: cover; /* Zuschneiden statt schwarze Balken */
+      object-position: center; /* Mittig zentrieren */
+      opacity: 0.6; /* Mehr Transparenz */
+      pointer-events: none; /* Keine Interaktion */
     }
 
     /* Footer */
