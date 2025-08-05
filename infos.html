@@ -11,7 +11,7 @@
       padding: 0;
       overflow-x: hidden;
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      color: white;
+      color: #00ffff; /* Türkis */
       background: black;
     }
 
@@ -61,23 +61,25 @@
 
     /* Text im ersten Kasten */
     .video-container:first-child p {
-      font-size: 0.7rem; /* ca. 30% kleiner */
+      font-size: 1.5rem; /* deutlich größer */
       max-width: 95%;
       text-shadow:
-        3px 3px 5px black,
-        -3px -3px 5px black,
-        3px -3px 5px black,
-        -3px 3px 5px black;
+        4px 4px 6px black,
+        -4px -4px 6px black,
+        4px -4px 6px black,
+        -4px 4px 6px black;
       line-height: 1.4;
       margin: 0;
-      animation: zittern 0.15s infinite;
+      animation: zittern 0.3s infinite;
+      /* Türkis als Textfarbe durch Vererbung vom Body */
+      color: inherit;
     }
 
     @keyframes zittern {
       0%, 100% { transform: translate(0, 0); }
-      25% { transform: translate(-1.5px, 1.5px); }
-      50% { transform: translate(1.5px, -1.5px); }
-      75% { transform: translate(-1.5px, -1.5px); }
+      25% { transform: translate(-0.5px, 0.5px); }
+      50% { transform: translate(0.5px, -0.5px); }
+      75% { transform: translate(-0.5px, -0.5px); }
     }
   </style>
 </head>
