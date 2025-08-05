@@ -25,7 +25,6 @@
       image-rendering: crisp-edges;
       z-index: -1;
     }
-    /* Kasten oben links */
     .info-box {
       position: fixed;
       top: 20px;
@@ -44,7 +43,7 @@
   </style>
 </head>
 <body>
-  <video autoplay muted loop playsinline>
+  <video id="bg-video" autoplay muted loop playsinline>
     <source src="https://raw.githubusercontent.com/Devilpope/Germandevilpopes/2269a8e33791a35bded7ac24cb8e827578f1a32e/7674017f-8678-492d-9195-b52c446da4fa%20(2).mp4" type="video/mp4" />
     Dein Browser unterstützt das Video-Tag nicht.
   </video>
@@ -53,5 +52,10 @@
     Willkommen bei The German Elite!<br />
     Hier findest du alle Infos zu unserer Gilde.
   </div>
+
+  <script>
+    const video = document.getElementById('bg-video');
+    video.playbackRate = 0.75;
+  </script>
 </body>
 </html>
