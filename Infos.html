@@ -3,30 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Infos - GermanDevilPopes</title>
+  <title>GermanDevilPopes - Infos</title>
   <style>
-    html, body {
+    /* Hintergrundvideo */
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      overflow: hidden;
+      overflow-x: hidden;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: white;
       background: black;
     }
-    video {
-      width: 100%;
-      height: 100%;
+
+    video#background-video {
+      position: fixed;
+      right: 50%;
+      top: 50%;
+      min-width: 100vw;
+      min-height: 100vh;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      transform: translate(50%, -50%);
       object-fit: cover;
+      filter: brightness(0.7);
+      animation-play-state: running;
+      animation-duration: 0s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      /* Geschwindigkeit 0.9 */
+      /* Leider video playbackRate kann nicht per CSS, muss per JS */
+    }
+
+    /* Container für Kästen */
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Video-Kasten */
+    .video-container {
+      width: 80vw;
+      max-width: 1200px;
+      aspect-ratio: 16 / 9;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 12px;
+      box-shadow:
+        0 4px 15px rgba(0, 255, 255, 0.6),
+        inset 0 0 20px rgba(0, 255, 255, 0.3);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Text im ersten Kasten */
+    .video-container:first-child p {
+      font-size: 1.1rem; /* etwas kleiner als vorher */
+      text-shadow:
+        3px 3px 5px black,
+        -3px -3px 5px black,
+        3px -3px 5px black,
+        -3px 3px 5px black;
+      line-height: 1.4;
+      margin: 0;
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop playsinline id="video">
-    <source src="https://raw.githubusercontent.com/Devilpope/Germandevilpopes/gh-pages/7674017f-8678-492d-9195-b52c446da4fa.mp4" type="video/mp4">
-  </video>
+  <video autoplay muted loop playsinline id="background-video" src="https://github.com/Devilpope/Germandevilpopes/raw/gh-pages/7674017f-8678-492d-9195-b52c446da4fa%20(2).mp4"></video>
+
+  <div class="container">
+    <div class="video-container">
+      <p>
+        Hallo meine finsteren Geschwister und Brüder der Dunkelheit. Die Horde wurde weich, die Horde wurde sanft, die Horde wurde friedlich, die Horde wurde zum Mensch!! Und das wird ab sofort geändert. <br />
+        Wir die GermanDevilPopes, sind das pure Böse. Wir Wildern, wir haben dunklen Humor, wir haben kein Erbarmen! Wir erschaffen wieder die Dunkelheit. Wenn wir auftauchen, wird es still um uns herum. <br />
+        Hier entsteht nicht nur eine Bekanntschaft. Hier entsteht Loyalität, es werden Werte vertreten und wir werden zu einer Familie der Dunkelheit. GDP - Die finstere und düstere Gilde
+      </p>
+    </div>
+    <div class="video-container"></div>
+    <div class="video-container"></div>
+    <div class="video-container"></div>
+  </div>
 
   <script>
-    // Geschwindigkeit z. B. auf 0.75 setzen
-    document.getElementById('video').playbackRate = 0.75;
+    // Video Geschwindigkeit setzen auf 0.9
+    const video = document.getElementById('background-video');
+    video.playbackRate = 0.9;
   </script>
 </body>
 </html>
