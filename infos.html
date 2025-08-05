@@ -50,8 +50,8 @@
       background: rgba(0, 0, 0, 0.7);
       border-radius: 12px;
       box-shadow:
-        0 4px 20px rgba(0, 255, 255, 0.8),
-        inset 0 0 25px rgba(0, 255, 255, 0.4);
+        0 4px 15px rgba(0, 255, 255, 0.6),
+        inset 0 0 20px rgba(0, 255, 255, 0.3);
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -59,19 +59,40 @@
       padding: 20px;
     }
 
+    /* Pulsierender Glow */
+    @keyframes glowPulse {
+      0% {
+        text-shadow:
+          4px 4px 6px black,
+          -4px -4px 6px black,
+          0 0 10px #00ffff,
+          0 0 20px #00ffff;
+      }
+      50% {
+        text-shadow:
+          4px 4px 6px black,
+          -4px -4px 6px black,
+          0 0 14px #00ffff,
+          0 0 28px #00ffff;
+      }
+      100% {
+        text-shadow:
+          4px 4px 6px black,
+          -4px -4px 6px black,
+          0 0 10px #00ffff,
+          0 0 20px #00ffff;
+      }
+    }
+
     /* Text-Optik für alle Kästen */
     .video-container p {
-      font-size: 1.64rem; /* vorher 1.43rem → +15% */
-      font-weight: bold; /* fetter */
+      font-size: 1.64rem; /* +15% größer als vorher */
+      font-weight: bold;
       max-width: 95%;
       color: #00ffff; /* kräftiges Türkis */
-      text-shadow:
-        4px 4px 6px black,
-        -4px -4px 6px black,
-        0 0 20px #00ffff,
-        0 0 40px #00ffff;
       line-height: 1.8; /* mehr Abstand */
       margin: 0;
+      animation: glowPulse 3s ease-in-out infinite;
     }
   </style>
 </head>
