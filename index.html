@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GermanDevilPopes - GDP-Gilde</title>
   <style>
-    /* Hintergrundbild mit Animation */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       color: #eee;
     }
-
     body::before {
       content: "";
       position: fixed;
@@ -24,21 +22,16 @@
       z-index: -1;
       animation: bgMove 20s ease-in-out infinite alternate;
       transform: scale(1.05);
-      filter: brightness(1);
     }
-
     @keyframes bgMove {
       0% { transform: scale(1.05) translateY(0px); }
       50% { transform: scale(1.12) translateY(-20px); }
       100% { transform: scale(1.05) translateY(0px); }
     }
-
-    /* Header */
     header {
       text-align: center;
       padding: 2rem 1rem;
     }
-
     header h1 {
       margin: 0;
       font-size: 3rem;
@@ -46,16 +39,13 @@
       text-shadow: 3px 3px 8px black, 0 0 5px black;
       animation: glow 2s ease-in-out infinite alternate;
     }
-
     header h1 a {
       color: #00ffff;
       text-decoration: none;
     }
-
     header h1 a:hover {
       text-decoration: underline;
     }
-
     @keyframes glow {
       from {
         text-shadow: 3px 3px 8px black, 0 0 5px #00ffff, 0 0 10px #00ffff,
@@ -66,24 +56,23 @@
                      0 0 40px #00ffff, 0 0 80px #00ffff;
       }
     }
-
-    /* Navigation */
     nav {
-      background: rgba(42, 42, 42, 0.8);
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
       display: flex;
       justify-content: center;
       gap: 1.5rem;
       padding: 1rem 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
-
     nav a {
       color: #00ffff;
       text-decoration: none;
       font-weight: bold;
+      text-shadow: 1px 1px 2px black;
       position: relative;
       transition: color 0.3s;
     }
-
     nav a::after {
       content: "";
       position: absolute;
@@ -95,52 +84,26 @@
       box-shadow: 0 0 10px #00ffff;
       transition: width 0.3s;
     }
-
     nav a:hover::after {
       width: 100%;
     }
-
-    /* Hauptinhalt */
     main {
       max-width: 900px;
       margin: 3rem auto;
       padding: 2rem;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.4);
       border-radius: 12px;
     }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      border-bottom: 2px solid #00ffff;
-      padding-bottom: 0.3rem;
-      text-shadow: 1px 1px 3px black;
-    }
-
-    .video-preview {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .video-preview iframe {
-      width: 300px;
-      height: 170px;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
-    }
-
     footer {
-      background: rgba(31, 31, 31, 0.8);
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
       text-align: center;
       padding: 1rem 0;
-      color: #888;
+      color: #eee;
       font-size: 0.9rem;
+      text-shadow: 1px 1px 2px black;
       margin-top: 2rem;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.4);
     }
   </style>
 </head>
@@ -149,22 +112,15 @@
     <h1><a href="https://thegermanelite.de" target="_blank" rel="noopener noreferrer">The German Elite</a></h1>
   </header>
   <nav>
-    <a href="#infos">Infos</a>
+    <a href="infos.html">Infos</a>
     <a href="bewerbung.html" target="_blank" rel="noopener noreferrer">Bewerbung</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
   <main>
-    <section id="infos">
-      <h2>Über unsere Gilde</h2>
-      <p>Willkommen bei The German Elite! Wir sind eine engagierte WoW-Gilde, die zusammen Raids meistert, PvP dominiert und einfach Spaß am Spiel hat.</p>
-      <p>Unsere Community legt Wert auf Teamwork, Spaß und Respekt.</p>
+    <section id="willkommen">
+      <h2>Willkommen</h2>
+      <p>Willkommen bei The German Elite! Unsere WoW-Gilde steht für Teamwork, Spaß und Respekt.</p>
     </section>
-    <section id="bewerbung">
-      <h2>Enjoy us</h2>
-      <div class="video-preview">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0" title="Video 2" allowfullscreen></iframe>
-      </div>
   </main>
   <footer>
     &copy; 2025 GERMAN DEVIL POPES - Alle Rechte vorbehalten
