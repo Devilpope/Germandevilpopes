@@ -5,30 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GermanDevilPopes - Infos</title>
   <style>
-    /* Vollbild-Video als Hintergrund */
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
+    html, body {
+      margin: 0; padding: 0; height: 100%; overflow: hidden;
       background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
-    video#bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
+    video {
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      z-index: -1;
+      filter: none;
     }
   </style>
 </head>
 <body>
-  <video id="bg-video" autoplay muted loop playsinline>
-    <source src="7674017f-8678-492d-9195-b52c446da4fa.mp4" type="video/mp4" />
+  <video autoplay muted loop playsinline>
+    <source src="https://raw.githubusercontent.com/Devilpope/Germandevilpopes/2269a8e33791a35bded7ac24cb8e827578f1a32e/7674017f-8678-492d-9195-b52c446da4fa%20(2).mp4" type="video/mp4">
     Dein Browser unterstützt das Video-Tag nicht.
   </video>
 </body>
