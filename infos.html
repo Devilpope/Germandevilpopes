@@ -47,7 +47,7 @@
       width: 80vw;
       max-width: 1200px;
       aspect-ratio: 16 / 9;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.85); /* Weniger transparent */
       border-radius: 12px;
       box-shadow:
         0 4px 15px rgba(177, 156, 217, 0.6),
@@ -59,28 +59,36 @@
       padding: 20px;
     }
 
-    /* Pulsierender Glow */
+    /* Pulsierender sanfterer Glow */
     @keyframes glowPulse {
       0% {
         text-shadow:
-          4px 4px 6px black,
-          -4px -4px 6px black,
-          0 0 10px #b19cd9,
-          0 0 20px #b19cd9;
+          /* Schwarze Outline für Lesbarkeit */
+          2px 2px 3px black,
+          -2px -2px 3px black,
+          2px -2px 3px black,
+          -2px 2px 3px black,
+          /* Sanfter Lila-Glow */
+          0 0 6px #b19cd9,
+          0 0 12px #b19cd9;
       }
       50% {
         text-shadow:
-          4px 4px 6px black,
-          -4px -4px 6px black,
-          0 0 14px #b19cd9,
-          0 0 28px #b19cd9;
+          2px 2px 3px black,
+          -2px -2px 3px black,
+          2px -2px 3px black,
+          -2px 2px 3px black,
+          0 0 10px #b19cd9,
+          0 0 18px #b19cd9;
       }
       100% {
         text-shadow:
-          4px 4px 6px black,
-          -4px -4px 6px black,
-          0 0 10px #b19cd9,
-          0 0 20px #b19cd9;
+          2px 2px 3px black,
+          -2px -2px 3px black,
+          2px -2px 3px black,
+          -2px 2px 3px black,
+          0 0 6px #b19cd9,
+          0 0 12px #b19cd9;
       }
     }
 
@@ -89,7 +97,7 @@
       font-size: 1.64rem; /* +15% größer als vorher */
       font-weight: bold;
       max-width: 95%;
-      color: #00ffff; /* Türkis Schriftfarbe behalten */
+      color: #00ffff; /* Türkis Schriftfarbe */
       line-height: 1.8; /* mehr Abstand */
       margin: 0;
       animation: glowPulse 3s ease-in-out infinite;
