@@ -12,7 +12,6 @@
       overflow-x: hidden;
       font-family: 'Comic Sans MS', cursive, sans-serif;
       background: black;
-      color: white;
     }
 
     video#background-video {
@@ -46,18 +45,17 @@
     .video-container {
       width: 80vw;
       max-width: 1200px;
-      aspect-ratio: 16 / 9;
       background: rgba(0, 0, 0, 0.85);
       border-radius: 12px;
       box-shadow:
-        0 4px 15px rgba(153, 50, 204, 0.6),
+        0 4px 15px rgba(153, 50, 204, 0.6), /* Lila */
         inset 0 0 20px rgba(153, 50, 204, 0.3);
       overflow: hidden;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
       padding: 20px;
-      color: #9932CC; /* dunkles Lila */
     }
 
     /* Pulsierender Schwarzer Glow */
@@ -80,63 +78,23 @@
     }
 
     /* Text-Optik für alle Kästen */
-    .video-container p {
-      font-size: 1.64rem;
+    .video-container p, 
+    .video-container h2 {
       font-weight: bold;
       max-width: 95%;
-      line-height: 1.8;
+      color: #9932CC; /* Dunkles Lila */
       margin: 0;
       animation: glowPulse 3s ease-in-out infinite;
-      color: #9932CC;
     }
 
-    /* Letzter Kasten kleiner */
-    .video-container.small-box {
-      aspect-ratio: auto;
-      height: 30vh; /* ca. 70% kleiner als normal */
-      max-height: 200px;
-      flex-direction: column;
-      justify-content: flex-start;
-      padding: 15px 20px;
+    .video-container p {
+      font-size: 1.64rem;
+      line-height: 1.8;
     }
 
-    /* Chat-Styling */
-    #chat-messages {
-      width: 100%;
-      height: 120px;
-      background: rgba(0,0,0,0.7);
-      border: 1px solid #9932CC;
-      border-radius: 8px;
-      overflow-y: auto;
-      padding: 10px;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      font-size: 1.4rem;
-      color: #9932CC;
-      margin-bottom: 10px;
-      box-sizing: border-box;
-      text-shadow:
-        0 0 4px black,
-        0 0 8px black;
-    }
-
-    #chat-input {
-      width: 100%;
-      padding: 8px 10px;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      font-size: 1.4rem;
-      border-radius: 8px;
-      border: 1px solid #9932CC;
-      background: rgba(0,0,0,0.85);
-      color: #9932CC;
-      box-sizing: border-box;
-      outline: none;
-      text-shadow:
-        0 0 4px black,
-        0 0 8px black;
-    }
-
-    #chat-input::placeholder {
-      color: #b19cd9;
+    .video-container h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -169,34 +127,29 @@
       </p>
     </div>
 
-    <!-- Dritter Kasten mit Chat -->
-    <div class="video-container small-box" id="chat-container">
-      <div id="chat-messages"></div>
-      <input id="chat-input" type="text" placeholder="Nachricht eingeben und Enter drücken..." />
+    <!-- Dritter Kasten - Gilden Regeln -->
+    <div class="video-container">
+      <h2>Gilden Regeln</h2>
+      <p>
+        1. Innerhalb der Gilde sollte ein respektvoller und ein freundlicher Ton herrschen.<br><br>
+        2. Ironie, Sarkasmus und Humor sollten niemanden persönlich verletzen. Auch wenn das Teil von der Gilde ist.<br><br>
+        3. Wir reduzieren niemanden aufgrund mangelnder WoW-Erfahrung, sondern versuchen dabei denjenigen zu helfen, der diese auch braucht.<br><br>
+        4. Streitigkeiten unter kleineren Gruppen, sollten nicht im Gilden-Chat ausgetragen werden.<br><br>
+        5. Die Gildenbank basiert auf Ordnung und Vertrauen. Wir verteilen keine Almosen, aber sind dennoch großzügig.<br><br>
+        6. Event-Raid Planungen findet ihr auf den Discord-Server, sowie der Website.<br><br>
+        7. Es gibt keine Abgrenzung zwischen Herkunft, Aussehen, oder Reallife Persönlichkeiten. Wir sind in der Gilde alle Gleich gestellt und das sollte auch der Kern sein.<br><br>
+        8. Habt Spaß, fragt dumme Fragen und genießt die WoW Zeit.<br><br>
+        9. exceedingly good vibes
+      </p>
     </div>
 
-    <!-- Vierter Kasten bleibt leer -->
+    <!-- Leerer Kasten -->
     <div class="video-container"></div>
   </div>
 
   <script>
-    // Video Geschwindigkeit setzen auf 0.9
     const video = document.getElementById('background-video');
     video.playbackRate = 0.9;
-
-    // Einfacher Chat im 3. Kasten (nur clientseitig)
-    const chatInput = document.getElementById('chat-input');
-    const chatMessages = document.getElementById('chat-messages');
-
-    chatInput.addEventListener('keydown', function(e) {
-      if(e.key === 'Enter' && chatInput.value.trim() !== '') {
-        const msg = document.createElement('div');
-        msg.textContent = chatInput.value.trim();
-        chatMessages.appendChild(msg);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-        chatInput.value = '';
-      }
-    });
   </script>
 </body>
 </html>
