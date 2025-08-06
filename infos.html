@@ -77,7 +77,7 @@
       }
     }
 
-    /* Text-Optik für alle Kästen */
+    /* Text-Optik für 1. und 2. Kasten */
     .video-container p {
       font-size: 1.64rem;
       font-weight: bold;
@@ -86,6 +86,12 @@
       line-height: 1.8;
       margin: 0;
       animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    /* Spezielle Formatierung nur für den 3. Kasten */
+    .video-container.rules p {
+      font-size: 1.2rem; /* kleiner */
+      line-height: 1.4; /* engerer Zeilenabstand */
     }
 
     /* Hauptmenü-Button */
@@ -126,7 +132,7 @@
         Hallo meine finsteren Geschwister und Brüder der Dunkelheit. Die Horde wurde weich, die Horde wurde sanft, die Horde wurde friedlich, die Horde wurde zum Mensch!! Und das wird ab sofort geändert.<br>
         Wir die GermanDevilPopes, sind das pure Böse. Wir Wildern, wir haben dunklen Humor, wir haben kein Erbarmen! Wir erschaffen wieder die Dunkelheit. Wenn wir auftauchen, wird es still um uns herum.<br>
         Hier entsteht nicht nur eine Bekanntschaft. Hier entsteht Loyalität, es werden Werte vertreten und wir werden zu einer Familie der Dunkelheit.<br>
-                                                                ~GDP - Die finstere und düstere Gilde~
+        GDP - Die finstere und düstere Gilde
       </p>
     </div>
 
@@ -146,7 +152,7 @@
     </div>
 
     <!-- Dritter Kasten: Gilden Regeln -->
-    <div class="video-container">
+    <div class="video-container rules">
       <p>
         <strong>Gilden Regeln</strong><br>
         1. Innerhalb der Gilde sollte ein respektvoller und ein freundlicher Ton herrschen.<br>
@@ -160,10 +166,6 @@
         9. exceedingly good vibes
       </p>
     </div>
-
-    <!-- Leere Kästen -->
-    <div class="video-container"></div>
-    <div class="video-container"></div>
   </div>
 
   <script>
