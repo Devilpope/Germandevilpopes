@@ -50,8 +50,8 @@
       background: rgba(0, 0, 0, 0.85); /* Weniger transparent */
       border-radius: 12px;
       box-shadow:
-        0 4px 15px rgba(177, 156, 217, 0.6),
-        inset 0 0 20px rgba(177, 156, 217, 0.3);
+        0 4px 15px rgba(0, 255, 255, 0.6),
+        inset 0 0 20px rgba(0, 255, 255, 0.3);
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -59,18 +59,18 @@
       padding: 20px;
     }
 
-    /* Pulsierender sanfterer Glow */
+    /* Pulsierender Glow in Türkis */
     @keyframes glowPulse {
       0% {
         text-shadow:
-          /* Schwarze Outline für Lesbarkeit */
+          /* Schwarze Outline */
           2px 2px 3px black,
           -2px -2px 3px black,
           2px -2px 3px black,
           -2px 2px 3px black,
-          /* Sanfter Lila-Glow */
-          0 0 6px #b19cd9,
-          0 0 12px #b19cd9;
+          /* Türkiser Glow */
+          0 0 6px #00ffff,
+          0 0 12px #00ffff;
       }
       50% {
         text-shadow:
@@ -78,8 +78,8 @@
           -2px -2px 3px black,
           2px -2px 3px black,
           -2px 2px 3px black,
-          0 0 10px #b19cd9,
-          0 0 18px #b19cd9;
+          0 0 10px #00ffff,
+          0 0 18px #00ffff;
       }
       100% {
         text-shadow:
@@ -87,8 +87,8 @@
           -2px -2px 3px black,
           2px -2px 3px black,
           -2px 2px 3px black,
-          0 0 6px #b19cd9,
-          0 0 12px #b19cd9;
+          0 0 6px #00ffff,
+          0 0 12px #00ffff;
       }
     }
 
@@ -97,8 +97,8 @@
       font-size: 1.64rem; /* +15% größer als vorher */
       font-weight: bold;
       max-width: 95%;
-      color: #00ffff; /* Türkis Schriftfarbe */
-      line-height: 1.8; /* mehr Abstand */
+      color: #9932CC; /* Dunkles Lila */
+      line-height: 1.8;
       margin: 0;
       animation: glowPulse 3s ease-in-out infinite;
     }
