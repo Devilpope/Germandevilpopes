@@ -31,13 +31,19 @@
       100% { transform: scale(1.1) translateY(0px); }
     }
 
-    /* Header */
+    /* Header mit Buttons */
     header {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem 1rem;
+      background: rgba(0,0,0,0.5);
+      box-shadow: 0 0 20px #00ffff;
+      border-bottom: 2px solid #00ffff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
     header h1 {
-      margin: 0;
+      margin: 0 0 1rem 0;
       font-size: 3rem;
       color: #00ffff;
       text-shadow: 3px 3px 8px black, 0 0 5px black;
@@ -58,36 +64,31 @@
       }
     }
 
-    /* Navigation */
-    nav {
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    /* Buttons Container */
+    #header-buttons {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem 0;
+      gap: 2rem;
     }
-    nav a {
-      color: #00ffff;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-      text-shadow: 1px 1px 3px black;
-    }
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      left: 0;
-      bottom: -4px;
+
+    /* Buttons Style */
+    #header-buttons a {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
       background: #00ffff;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
       box-shadow: 0 0 10px #00ffff;
-      transition: width 0.3s;
+      transition: background-color 0.3s, color 0.3s;
+      user-select: none;
     }
-    nav a:hover::after {
-      width: 100%;
+    #header-buttons a:hover,
+    #header-buttons a:focus {
+      background: #00cccc;
+      color: #fff;
+      outline: none;
     }
 
     /* News-Kasten */
@@ -148,29 +149,18 @@
       border-radius: 8px;
     }
 
-    /* Footer */
-    footer {
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 -4px 10px rgba(0,0,0,0.4);
-      text-align: center;
-      padding: 1rem 0;
-      color: #eee;
-      text-shadow: 1px 1px 3px black;
-      font-size: 0.9rem;
-      margin-top: 2rem;
-    }
+    /* Footer weg lassen */
   </style>
 </head>
 <body>
   <header>
     <h1><a href="https://thegermanelite.de" target="_blank" rel="noopener noreferrer">The German Elite</a></h1>
+    <nav id="header-buttons" aria-label="Hauptnavigation">
+      <a href="infos.html">Infos</a>
+      <a href="bewerbung.html" target="_blank" rel="noopener noreferrer">Bewerbung</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
   </header>
-  <nav>
-    <a href="infos.html">Infos</a>
-    <a href="bewerbung.html" target="_blank" rel="noopener noreferrer">Bewerbung</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
 
   <section id="news-box" aria-label="News und Ankündigungen">
     <!-- Hier deine News reinschreiben und per GitHub aktualisieren -->
@@ -183,8 +173,5 @@
     <iframe src="https://epoch-status.info/embed/project-epoch" scrolling="no" loading="lazy" referrerpolicy="no-referrer"></iframe>
   </section>
 
-  <footer>
-    &copy; 2025 GERMAN DEVIL POPES - Alle Rechte vorbehalten
-  </footer>
 </body>
 </html>
