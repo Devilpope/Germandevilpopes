@@ -91,7 +91,7 @@
     }
 
     /* News-Kasten */
-    #news-box {
+    #news-box, #status-box {
       max-width: 800px;
       margin: 2rem auto;
       background: rgba(0,0,0,0.7);
@@ -108,14 +108,14 @@
       scrollbar-color: #00ffff transparent;
     }
     /* Scrollbar für Webkit */
-    #news-box::-webkit-scrollbar {
+    #news-box::-webkit-scrollbar, #status-box::-webkit-scrollbar {
       width: 8px;
     }
-    #news-box::-webkit-scrollbar-thumb {
+    #news-box::-webkit-scrollbar-thumb, #status-box::-webkit-scrollbar-thumb {
       background-color: #00ffff;
       border-radius: 10px;
     }
-    #news-box::-webkit-scrollbar-track {
+    #news-box::-webkit-scrollbar-track, #status-box::-webkit-scrollbar-track {
       background: transparent;
     }
 
@@ -147,6 +147,11 @@
     <!-- Hier deine News reinschreiben und per GitHub aktualisieren -->
     <p>Willkommen bei den German Devil Popes! Hier findest du alle aktuellen News und Ankündigungen.</p>
     <p>Bleib dran für Updates, Events und mehr.</p>
+  </section>
+
+  <section id="status-box" aria-label="Realm Status">
+    <h2>Realm Status</h2>
+    <p>Hier kannst du den aktuellen Status deines Realm einfügen, z.B. per IFrame oder API.</p>
   </section>
 
   <footer>
