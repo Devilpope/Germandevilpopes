@@ -45,16 +45,16 @@
     .video-container {
       width: 80vw;
       max-width: 1200px;
+      aspect-ratio: 16 / 9;
       background: rgba(0, 0, 0, 0.85);
       border-radius: 12px;
       box-shadow:
-        0 4px 15px rgba(153, 50, 204, 0.6), /* Lila */
+        0 4px 15px rgba(153, 50, 204, 0.6),
         inset 0 0 20px rgba(153, 50, 204, 0.3);
       overflow: hidden;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+      justify-content: center;
+      align-items: center;
       padding: 20px;
     }
 
@@ -78,44 +78,62 @@
     }
 
     /* Text-Optik für alle Kästen */
-    .video-container p, 
-    .video-container h2 {
+    .video-container p {
+      font-size: 1.64rem;
       font-weight: bold;
       max-width: 95%;
-      color: #9932CC; /* Dunkles Lila */
+      color: #9932CC;
+      line-height: 1.8;
       margin: 0;
       animation: glowPulse 3s ease-in-out infinite;
     }
 
-    .video-container p {
-      font-size: 1.64rem;
-      line-height: 1.8;
+    /* Hauptmenü-Button */
+    .menu-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.85);
+      color: #9932CC;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow:
+        0 0 8px rgba(0, 0, 0, 0.8),
+        inset 0 0 10px rgba(153, 50, 204, 0.6);
+      transition: background 0.3s ease;
     }
 
-    .video-container h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
+    .menu-button:hover {
+      background: rgba(153, 50, 204, 0.8);
+      color: white;
     }
   </style>
 </head>
 <body>
+  <!-- Hauptmenü-Button -->
+  <a href="https://devilpope.github.io/Germandevilpopes" class="menu-button">Hauptmenü</a>
+
+  <!-- Hintergrundvideo -->
   <video autoplay muted loop playsinline id="background-video" src="https://github.com/Devilpope/Germandevilpopes/raw/gh-pages/7674017f-8678-492d-9195-b52c446da4fa%20(2).mp4"></video>
 
   <div class="container">
     <!-- Erster Kasten -->
     <div class="video-container">
       <p>
-        Hallo meine finsteren Geschwister und Brüder der Dunkelheit. Die Horde wurde weich, die Horde wurde sanft, die Horde wurde friedlich, die Horde wurde zum Mensch!! Und das wird ab sofort geändert. <br />
-        Wir die GermanDevilPopes, sind das pure Böse. Wir Wildern, wir haben dunklen Humor, wir haben kein Erbarmen! Wir erschaffen wieder die Dunkelheit. Wenn wir auftauchen, wird es still um uns herum. <br />
-        Hier entsteht nicht nur eine Bekanntschaft. Hier entsteht Loyalität, es werden Werte vertreten und wir werden zu einer Familie der Dunkelheit. 
-        GDP - Die finstere und düstere Gilde
+        Hallo meine finsteren Geschwister und Brüder der Dunkelheit. Die Horde wurde weich, die Horde wurde sanft, die Horde wurde friedlich, die Horde wurde zum Mensch!! Und das wird ab sofort geändert.<br>
+        Wir die GermanDevilPopes, sind das pure Böse. Wir Wildern, wir haben dunklen Humor, wir haben kein Erbarmen! Wir erschaffen wieder die Dunkelheit. Wenn wir auftauchen, wird es still um uns herum.<br>
+        Hier entsteht nicht nur eine Bekanntschaft. Hier entsteht Loyalität, es werden Werte vertreten und wir werden zu einer Familie der Dunkelheit.<br>
+                                                                ~GDP - Die finstere und düstere Gilde~
       </p>
     </div>
 
     <!-- Zweiter Kasten -->
     <div class="video-container">
       <p>
-        Was erwartet euch?<br><br>
+        Was erwartet euch?<br>
         - Dunkler Humor, aber auch ernste Genossen<br>
         - Erfahrene WoW-Spieler, aber auch Neulinge sind herzlich Willkommen.<br>
         - Die Gilde ist ab 18+<br>
@@ -127,23 +145,24 @@
       </p>
     </div>
 
-    <!-- Dritter Kasten - Gilden Regeln -->
+    <!-- Dritter Kasten: Gilden Regeln -->
     <div class="video-container">
-      <h2>Gilden Regeln</h2>
       <p>
-        1. Innerhalb der Gilde sollte ein respektvoller und ein freundlicher Ton herrschen.<br><br>
-        2. Ironie, Sarkasmus und Humor sollten niemanden persönlich verletzen. Auch wenn das Teil von der Gilde ist.<br><br>
-        3. Wir reduzieren niemanden aufgrund mangelnder WoW-Erfahrung, sondern versuchen dabei denjenigen zu helfen, der diese auch braucht.<br><br>
-        4. Streitigkeiten unter kleineren Gruppen, sollten nicht im Gilden-Chat ausgetragen werden.<br><br>
-        5. Die Gildenbank basiert auf Ordnung und Vertrauen. Wir verteilen keine Almosen, aber sind dennoch großzügig.<br><br>
-        6. Event-Raid Planungen findet ihr auf den Discord-Server, sowie der Website.<br><br>
-        7. Es gibt keine Abgrenzung zwischen Herkunft, Aussehen, oder Reallife Persönlichkeiten. Wir sind in der Gilde alle Gleich gestellt und das sollte auch der Kern sein.<br><br>
-        8. Habt Spaß, fragt dumme Fragen und genießt die WoW Zeit.<br><br>
+        <strong>Gilden Regeln</strong><br>
+        1. Innerhalb der Gilde sollte ein respektvoller und ein freundlicher Ton herrschen.<br>
+        2. Ironie, Sarkasmus und Humor sollten niemanden persönlich verletzen. Auch wenn das Teil von der Gilde ist.<br>
+        3. Wir reduzieren niemanden aufgrund mangelnder WoW-Erfahrung, sondern versuchen dabei denjenigen zu helfen, der diese auch braucht.<br>
+        4. Streitigkeiten unter kleineren Gruppen, sollten nicht im Gilden-Chat ausgetragen werden.<br>
+        5. Die Gildenbank basiert auf Ordnung und Vertrauen. Wir verteilen keine Almosen, aber sind dennoch großzügig.<br>
+        6. Event-Raid Planungen findet ihr auf den Discord-Server, sowie der Website.<br>
+        7. Es gibt keine Abgrenzung zwischen Herkunft, Aussehen, oder Reallife Persönlichkeiten. Wir sind in der Gilde alle gleich gestellt und das sollte auch der Kern sein.<br>
+        8. Habt Spaß, fragt dumme Fragen und genießt die WoW Zeit.<br>
         9. exceedingly good vibes
       </p>
     </div>
 
-    <!-- Leerer Kasten -->
+    <!-- Leere Kästen -->
+    <div class="video-container"></div>
     <div class="video-container"></div>
   </div>
 
