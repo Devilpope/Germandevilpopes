@@ -28,6 +28,29 @@
       filter: brightness(0.7);
     }
 
+    /* Hauptmenü Button oben links */
+    .main-menu {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: rgba(153, 50, 204, 0.85);
+      color: white;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(153, 50, 204, 0.7);
+      text-decoration: none;
+      font-size: 1rem;
+      z-index: 10;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+
+    .main-menu:hover {
+      background: rgba(153, 50, 204, 1);
+      box-shadow: 0 0 15px rgba(153, 50, 204, 1);
+    }
+
     /* Container für Kästen */
     .container {
       position: relative;
@@ -46,10 +69,10 @@
       width: 80vw;
       max-width: 1200px;
       aspect-ratio: 16 / 9;
-      background: rgba(0, 0, 0, 0.85); /* leicht dunkler als 0.7 */
+      background: rgba(0, 0, 0, 0.85);
       border-radius: 12px;
       box-shadow:
-        0 4px 15px rgba(153, 50, 204, 0.6), /* Lila statt Türkis */
+        0 4px 15px rgba(153, 50, 204, 0.6),
         inset 0 0 20px rgba(153, 50, 204, 0.3);
       overflow: hidden;
       display: flex;
@@ -82,7 +105,7 @@
       font-size: 1.64rem;
       font-weight: bold;
       max-width: 95%;
-      color: #9932CC; /* Dunkles Lila */
+      color: #9932CC;
       line-height: 1.8;
       margin: 0;
       animation: glowPulse 3s ease-in-out infinite;
@@ -91,13 +114,16 @@
     /* Letzter Kasten kleiner */
     .video-container.small-box {
       aspect-ratio: auto;
-      height: 30vh; /* ca. 70% kleiner als normal */
+      height: 30vh;
       max-height: 200px;
     }
   </style>
 </head>
 <body>
   <video autoplay muted loop playsinline id="background-video" src="https://github.com/Devilpope/Germandevilpopes/raw/gh-pages/7674017f-8678-492d-9195-b52c446da4fa%20(2).mp4"></video>
+
+  <!-- Hauptmenü Button -->
+  <a href="https://devilpope.github.io/Germandevilpopes" class="main-menu" tabindex="0" aria-label="Zur Hauptseite">Hauptmenü</a>
 
   <div class="container">
     <!-- Erster Kasten -->
@@ -131,7 +157,6 @@
   </div>
 
   <script>
-    // Video Geschwindigkeit setzen auf 0.9
     const video = document.getElementById('background-video');
     video.playbackRate = 0.9;
   </script>
