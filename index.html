@@ -31,16 +31,10 @@
       100% { transform: scale(1.1) translateY(0px); }
     }
 
-    /* Header mit Buttons */
+    /* Header */
     header {
       text-align: center;
-      padding: 1.5rem 1rem 1rem;
-      background: rgba(0,0,0,0.5);
-      box-shadow: 0 0 20px #00ffff;
-      border-bottom: 2px solid #00ffff;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      padding: 2rem 1rem 1rem;
     }
     header h1 {
       margin: 0 0 1rem 0;
@@ -68,13 +62,14 @@
     #header-buttons {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 0.5rem; /* weniger Abstand */
     }
 
     /* Buttons Style */
     #header-buttons a {
       display: inline-block;
-      padding: 0.6rem 1.5rem;
+      padding: 1rem 2rem; /* größere Buttons */
+      font-size: 1.3rem;   /* größere Schrift */
       background: #00ffff;
       color: black;
       font-weight: bold;
@@ -149,12 +144,12 @@
       border-radius: 8px;
     }
 
-    /* Footer weg lassen */
+    /* Footer entfernen, daher hier keine Styles für Footer */
   </style>
 </head>
 <body>
   <header>
-    <h1><a href="https://thegermanelite.de" target="_blank" rel="noopener noreferrer">The German Elite</a></h1>
+    <h1><a href="https://thegermanelite.de" target="_blank" rel="noopener noreferrer">German Devil Popes</a></h1>
     <nav id="header-buttons" aria-label="Hauptnavigation">
       <a href="infos.html">Infos</a>
       <a href="bewerbung.html" target="_blank" rel="noopener noreferrer">Bewerbung</a>
