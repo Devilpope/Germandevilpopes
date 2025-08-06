@@ -11,7 +11,6 @@
       padding: 0;
       overflow-x: hidden;
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      color: white;
       background: black;
     }
 
@@ -47,11 +46,11 @@
       width: 80vw;
       max-width: 1200px;
       aspect-ratio: 16 / 9;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.85); /* leicht dunkler als 0.7 */
       border-radius: 12px;
       box-shadow:
-        0 4px 15px rgba(177, 156, 217, 0.6),
-        inset 0 0 20px rgba(177, 156, 217, 0.3);
+        0 4px 15px rgba(153, 50, 204, 0.6), /* Lila statt Türkis */
+        inset 0 0 20px rgba(153, 50, 204, 0.3);
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -59,28 +58,22 @@
       padding: 20px;
     }
 
-    /* Pulsierender Glow */
+    /* Pulsierender Schwarzer Glow */
     @keyframes glowPulse {
       0% {
         text-shadow:
-          4px 4px 6px black,
-          -4px -4px 6px black,
-          0 0 10px #b19cd9,
-          0 0 20px #b19cd9;
+          0 0 4px black,
+          0 0 8px black;
       }
       50% {
         text-shadow:
-          4px 4px 6px black,
-          -4px -4px 6px black,
-          0 0 14px #b19cd9,
-          0 0 28px #b19cd9;
+          0 0 6px black,
+          0 0 14px black;
       }
       100% {
         text-shadow:
-          4px 4px 6px black,
-          -4px -4px 6px black,
-          0 0 10px #b19cd9,
-          0 0 20px #b19cd9;
+          0 0 4px black,
+          0 0 8px black;
       }
     }
 
@@ -89,7 +82,7 @@
       font-size: 1.64rem;
       font-weight: bold;
       max-width: 95%;
-      color: #5a3e8a; /* dunkles Lila */
+      color: #9932CC; /* Dunkles Lila */
       line-height: 1.8;
       margin: 0;
       animation: glowPulse 3s ease-in-out infinite;
