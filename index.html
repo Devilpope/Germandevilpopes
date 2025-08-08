@@ -62,14 +62,14 @@
     #header-buttons {
       display: flex;
       justify-content: center;
-      gap: 0.5rem; /* weniger Abstand */
+      gap: 0.5rem;
     }
 
     /* Buttons Style */
     #header-buttons a {
       display: inline-block;
-      padding: 1rem 2rem; /* größere Buttons */
-      font-size: 1.3rem;   /* größere Schrift */
+      padding: 1rem 2rem;
+      font-size: 1.3rem;
       background: #00ffff;
       color: black;
       font-weight: bold;
@@ -103,7 +103,6 @@
       scrollbar-width: thin;
       scrollbar-color: #00ffff transparent;
     }
-    /* Scrollbar für Webkit */
     #news-box::-webkit-scrollbar {
       width: 8px;
     }
@@ -127,7 +126,6 @@
       color: #00ffff;
       font-size: 1.2rem;
     }
-
     #status-box h2 {
       margin-top: 0;
       margin-bottom: 1rem;
@@ -135,16 +133,14 @@
       font-weight: bold;
       text-shadow: 0 0 5px #00ffff;
     }
-
-    #status-box iframe {
-      width: 100%;
-      height: 320px;
-      border: none;
-      background: transparent;
-      border-radius: 8px;
+    .realm-online {
+      color: lime;
+      font-weight: bold;
     }
-
-    /* Footer entfernen, daher hier keine Styles für Footer */
+    .realm-offline {
+      color: red;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -158,15 +154,47 @@
   </header>
 
   <section id="news-box" aria-label="News und Ankündigungen">
-    <!-- Hier deine News reinschreiben und per GitHub aktualisieren -->
     <p>Willkommen bei den German Devil Popes! Hier findest du alle aktuellen News und Ankündigungen.</p>
     <p>Bleib dran für Updates, Events und mehr.</p>
   </section>
 
   <section id="status-box" aria-label="Realm Status">
     <h2>Realm Status von Project Epoch</h2>
-    <iframe src="https://epoch-status.info/embed/project-epoch" scrolling="no" loading="lazy" referrerpolicy="no-referrer"></iframe>
+    <div id="realmStatusContainer">Lade Realm-Status...</div>
   </section>
 
+  <script>
+    async function loadRealmStatus() {
+      try {
+        const res = await fetch('https://DEIN_API_SERVER/api/realm-status'); // API-URL anpassen
+        const data = await res.json();
+
+        const container = document.getElementById('realmStatusContainer');
+        container.innerHTML = '';
+
+        data.forEach(realm => {
+          const utcDateStr = realm.time.replace(" ", "T") + "Z";
+          const date = new Date(utcDateStr);
+
+          const div = document.createElement('div');
+          div.style.marginBottom = '0.5rem';
+          div.innerHTML = `
+            <span class="${realm.status.toLowerCase() === 'online' ? 'realm-online' : 'realm-offline'}">
+              ${realm.name}
+            </span> – ${realm.status} 
+            <small style="color:#ccc">(${date.toLocaleString('de-DE')})</small>
+          `;
+          container.appendChild(div);
+        });
+      } catch (err) {
+        document.getElementById('realmStatusContainer').textContent =
+          'Fehler beim Laden des Realm-Status.';
+        console.error(err);
+      }
+    }
+
+    loadRealmStatus();
+    setInterval(loadRealmStatus, 30000);
+  </script>
 </body>
 </html>
